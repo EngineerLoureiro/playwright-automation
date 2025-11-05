@@ -1,5 +1,69 @@
-export const user = {
-  allowed: { username: "test", password: "password123" },
-  blocked: { username: "testblock", password: "password123" },
-  invalid: { username: "Ivo", password: "password12" },
+export const users = [
+  {
+    scenario: "Full Hobbies",
+    name: "Ivo",
+    email: "ivo@ivo.com",
+    password: "password123",
+    country: "Portugal",
+    gender: "Male",
+    hobbies: [
+      "Read books",
+      "Travel",
+      "Video Games",
+      "Sports",
+      "Movies",
+      "Board Games",
+    ],
+  },
+  {
+    scenario: "No Hobbies",
+    name: "Ivo",
+    email: "ivo@ivo.com",
+    password: "password123",
+    country: "Mexico",
+    gender: "Male",
+    hobbies: [],
+  },
+  {
+    scenario: "Multiple Hobbies",
+    name: "Ivo",
+    email: "ivo@ivo.com",
+    password: "password123",
+    country: "Canada",
+    gender: "Female",
+    hobbies: ["Read books", "Travel", "Video Games", "Sports"],
+  },
+  {
+    scenario: "Others",
+    name: "Ivo",
+    email: "ivo@ivo.com",
+    password: "password123",
+    country: "Brazil",
+    gender: "Other",
+    hobbies: [
+      "Read books",
+      "Travel",
+      "Video Games",
+      "Sports",
+      "Movies",
+      "Board Games",
+    ],
+  },
+  {
+    scenario: "Murica",
+    name: "Ivo",
+    email: "ivo@ivo.com",
+    password: "password123",
+    country: "United States of America",
+    gender: "Other",
+    hobbies: ["Read books", "Travel", "Video Games", "Sports"],
+  },
+];
+
+export const failedFormValidationMessages = {
+  name: "The name field is required.",
+  email: "The email field is required.",
+  password: "The password field is required.",
+  country: "The country field is required.",
+  gender: "The gender field is required.",
 };
