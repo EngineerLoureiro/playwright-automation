@@ -39,7 +39,7 @@ export const users = [
     email: "ivo@ivo.com",
     password: "password123",
     country: "Brazil",
-    gender: "Others",
+    gender: "Other",
     hobbies: [
       "Read books",
       "Travel",
@@ -55,7 +55,7 @@ export const users = [
     email: "ivo@ivo.com",
     password: "password123",
     country: "United States of America",
-    gender: "Others",
+    gender: "Other",
     hobbies: ["Read books", "Travel", "Video Games", "Sports"],
   },
 ];

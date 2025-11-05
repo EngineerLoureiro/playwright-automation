@@ -14,7 +14,7 @@ usersDummy.forEach((user) => {
 
     await page.getByRole("textbox", { name: "Password *" }).fill(user.password);
     await page.getByLabel("Country *").selectOption("portugal");
-    await page.getByRole("radio", { name: "Male", exact: true }).check();
+    await page.getByRole("radio", { name: user.gender, exact: true }).check();
 
     user.hobbies.forEach(async (hooby) => {
       await page.locator("label").filter({ hasText: hooby }).click();
