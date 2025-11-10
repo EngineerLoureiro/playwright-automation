@@ -1,4 +1,4 @@
-import { Locator, Page } from "@playwright/test";
+import { expect, Locator, Page } from "@playwright/test";
 
 export class FormPage {
   private page: Page;
@@ -8,6 +8,9 @@ export class FormPage {
   country: Locator;
   gender: (value: string) => Locator;
   hobbies: (hobbies: string[]) => void;
+  successTitle: Locator;
+  successMessage: Locator;
+
   constructor(page: Page) {
     this.page = page;
     this.nameInput = page.getByRole("textbox", { name: "Name *" });
@@ -22,6 +25,8 @@ export class FormPage {
         await page.locator("label").filter({ hasText: hobby }).click();
       }
     };
+    this.successTitle = page.getByText("Success!");
+    this.successMessage = page.getByText("The form has been submitted");
   }
 
   async navigateToForm() {
@@ -47,5 +52,10 @@ export class FormPage {
 
   async selectHobbies(hobbies: string[]) {
     await this.hobbies(hobbies);
+  }
+
+  async assertSubmitted() {
+    await expect(this.successTitle).toBeVisible();
+    await expect(this.successMessage).toBeVisible();
   }
 }

@@ -13,5 +13,8 @@ for (const user of users) {
     await form.fillPassword(user.password);
     await form.selectGender(user.gender);
     await form.selectHobbies(user.hobbies);
+
+    await page.getByRole("button", { name: "Send" }).click();
+    await form.assertSubmitted();
   });
 }
