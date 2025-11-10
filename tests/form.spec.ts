@@ -13,7 +13,7 @@ usersDummy.forEach((user) => {
     await page.getByRole("textbox", { name: "Email *" }).fill(user.email);
 
     await page.getByRole("textbox", { name: "Password *" }).fill(user.password);
-    await page.getByLabel("Country *").selectOption("portugal");
+    await page.getByLabel("Country *").selectOption(user.country);
     await page.getByRole("radio", { name: user.gender, exact: true }).check();
 
     user.hobbies.forEach(async (hooby) => {
