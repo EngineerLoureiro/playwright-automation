@@ -1,7 +1,7 @@
 import { expect, Locator, Page } from "@playwright/test";
 
 export class FormPage {
-  private page: Page;
+  page: Page;
   nameInput: Locator;
   email: Locator;
   password: Locator;

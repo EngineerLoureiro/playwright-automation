@@ -1,5 +1,5 @@
 import test, { expect } from "@playwright/test";
-import { users, failedFormValidationMessages } from "./data";
+import { users, failedFormValidationMessages } from "./data/data";
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/form");

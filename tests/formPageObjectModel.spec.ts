@@ -1,6 +1,6 @@
 import test from "@playwright/test";
 import { FormPage } from "./pages/form.page";
-import { users } from "./data";
+import { users } from "./data/data";
 
 for (const user of users) {
   test(`FORM FILLING  FOR ${user.name}`, async ({ page }) => {
